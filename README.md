@@ -1,59 +1,129 @@
-# LibraryInterface
+# 📚 Library Management System
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.4.
+A full-stack web application for managing a library's books, categories, and authors. Built using **ASP.NET Core Web API** for the backend and **Angular** for the frontend.
 
-## Development server
+---
 
-To start a local development server, run:
+## 🚀 Features
 
-```bash
-ng serve
-```
+### 🖥 Frontend (Angular)
+- Display books, categories, and authors
+- Responsive navigation and layout
+- Search functionality
+- Reactive forms
+- JWT-based authentication
+- Role-based access (Admin/User)
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+### 🔧 Backend (ASP.NET Core Web API)
+- RESTful API with CRUD operations for:
+  - Books
+  - Categories
+  - Authors
+  - Users (with Identity & JWT)
+- Role management (Admin/User)
+- Email confirmation support
+- CORS configuration
+- Swagger UI for API testing
 
-## Code scaffolding
+---
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+## 🛠 Tech Stack
 
-```bash
-ng generate component component-name
-```
+| Layer         | Technology                         |
+|---------------|------------------------------------|
+| Frontend      | Angular 17, RxJS, Angular Material |
+| Backend       | ASP.NET Core 7 Web API             |
+| Authentication| JWT, ASP.NET Identity              |
+| Database      | SQL Server + Entity Framework Core |
+| Styling       | Bootstrap 5 / Tailwind CSS         |
+| Tools         | Swagger, Visual Studio, VS Code    |
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+---
 
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
+## 📂 Project Structure
 
 ```bash
-ng e2e
+LibraryInterface/        # Angular Frontend
+Library.API/             # ASP.NET Core Web API
+Library.Core/            # Core Models and Interfaces
+Library.Infrastructure/  # EF Configuration and Repositories
+Library.User.Management/ # Identity & Auth Services
 ```
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+---
 
-## Additional Resources
+## 🔧 Setup Instructions
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+### 🖥 Backend Setup (ASP.NET Core)
+
+1. Navigate to the API project:
+   ```bash
+   cd Library.API
+   ```
+
+2. Update `appsettings.json` with your SQL Server connection string.
+
+3. Apply EF Core migrations:
+   ```bash
+   dotnet ef database update
+   ```
+
+4. Run the API:
+   ```bash
+   dotnet run
+   ```
+
+### 🌐 Frontend Setup (Angular)
+
+1. Navigate to the Angular app:
+   ```bash
+   cd LibraryInterface
+   ```
+
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+3. Start the development server:
+   ```bash
+   ng serve
+   ```
+
+---
+
+## 🔐 Authentication & Roles
+
+- Register new users via the UI
+- Confirm email using email service
+- Roles:
+  - **Admin**: Manage books, categories, and users
+  - **User**: Browse books and categories
+
+---
+
+## 🌍 API Documentation
+
+Swagger UI is available at:
+
+```
+https://localhost:{PORT}/swagger
+```
+
+---
+
+## 📸 Screenshots
+
+> Add screenshots of your app here.
+
+---
+
+## 🤝 Contributing
+
+Contributions are welcome! Feel free to fork the repo and submit a PR.
+
+---
+
+## 📄 License
+
+This project is licensed for educational and demo purposes.
